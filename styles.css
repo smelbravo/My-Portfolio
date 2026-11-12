@@ -56,14 +56,10 @@ h2 { font-size: clamp(3rem, 7vw, 5rem); font-weight: 700; }
 .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .skill-card, .card { display: flex; flex-direction: column; min-width: 0; background: var(--panel); border: 1px solid var(--line); }
 .card:hover { border-color: #70845c; }
-.art { position: relative; isolation: isolate; display: grid; align-items: end; aspect-ratio: 2.55; overflow: hidden; padding: 16px 24px; background: linear-gradient(120deg, #18231b, #49634b); }
-.art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 44%; z-index: -2; }
-.art::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, #000c, transparent 95%), repeating-linear-gradient(0deg, transparent 0 4px, #ffffff10 4px 5px); }
-.art span { font: 800 clamp(2.2rem, 5vw, 4.1rem)/.95 var(--heading); text-shadow: 0 2px 14px #0008; }
-.run { background: radial-gradient(ellipse at 75% 15%, #c17b44, #4d2a29 42%, #251719 75%); }
+.run { background: #262322; }
 .gun { background: #342f49; }
-.vostok { background: radial-gradient(ellipse at 75% 15%, #748065, #293c31 58%, #16241e); }
-.code { background: linear-gradient(125deg, #17282c, #346267); }
+.vostok { background: #191d15; }
+.code { background: #151b16; }
 .card-body { padding: 20px 24px; display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
 .skill-card h3, .card h3, .timeline h3 { font-size: 1.12rem; line-height: 1.25; overflow-wrap: anywhere; }
 .card h3 { margin-top: 6px; }
@@ -101,3 +97,6 @@ h2 { font-size: clamp(3rem, 7vw, 5rem); font-weight: 700; }
   .timeline li { grid-template-columns: 1fr; gap: 4px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.art { display: grid; place-items: center; aspect-ratio: 16 / 9; overflow: hidden; }
+.art img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; object-position: center; }
