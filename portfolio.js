@@ -1,4 +1,4 @@
-const filters = document.querySelector('.filters');
+const filters = document.querySelector('#project-filters');
 const buttons = filters.querySelectorAll('button');
 const cards = document.querySelectorAll('.card');
 const featured = document.querySelector('.featured');
@@ -26,6 +26,71 @@ for (const button of buttons) {
     featured.hidden = !featured.querySelector('.card:not([hidden])');
     archive.hidden = !archive.querySelector('.card:not([hidden])');
     archive.open = !showAll;
-    status.textContent = showAll ? 'Todos os projetos' : `${count} projetos na categoria ${category}`;
+    announceFilter(button, count);
+  });
+}
+
+const picker = document.querySelector('#language-picker');
+const languages = picker.querySelectorAll('button');
+const languageKey = 'portfolio-language';
+const translatedText = Array.from(document.querySelectorAll('[data-en]'), element => {
+  const node = Array.from(element.childNodes).find(child => child.nodeType === Node.TEXT_NODE && child.data.trim());
+  const original = node.data;
+  return { node, original, english: original.replace(original.trim(), element.dataset.en) };
+});
+const translatedAttributes = ['aria-label', 'alt', 'content'].flatMap(attribute =>
+  Array.from(document.querySelectorAll(`[data-en-${attribute}]`), element => ({
+    element,
+    attribute,
+    original: element.getAttribute(attribute),
+    english: element.getAttribute(`data-en-${attribute}`),
+  }))
+);
+
+function announceFilter(button, count) {
+  const english = document.documentElement.lang === 'en';
+  if (button.dataset.filter === 'Todos') {
+    status.textContent = english ? 'All projects' : 'Todos os projetos';
+  } else {
+    const category = button.textContent;
+    status.textContent = english ? `${count} projects in ${category}` : `${count} projetos na categoria ${category}`;
+  }
+}
+
+function setLanguage(language) {
+  const english = language === 'en';
+  document.documentElement.lang = english ? 'en' : 'pt-PT';
+  for (const { node, original, english: translation } of translatedText) {
+    node.data = english ? translation : original;
+  }
+  for (const { element, attribute, original, english: translation } of translatedAttributes) {
+    element.setAttribute(attribute, english ? translation : original);
+  }
+  for (const button of languages) {
+    button.setAttribute('aria-pressed', String(button.lang === document.documentElement.lang));
+  }
+  if (status.textContent) {
+    const activeFilter = filters.querySelector('[aria-pressed="true"]');
+    announceFilter(activeFilter, Array.from(cards).filter(card => !card.hidden).length);
+  }
+}
+
+let savedLanguage;
+try {
+  savedLanguage = localStorage.getItem(languageKey);
+} catch {
+  // The selector still works when storage is unavailable.
+}
+setLanguage(savedLanguage);
+picker.hidden = false;
+
+for (const button of languages) {
+  button.addEventListener('click', () => {
+    setLanguage(button.lang);
+    try {
+      localStorage.setItem(languageKey, button.lang);
+    } catch {
+      // Keep the current language for this visit.
+    }
   });
 }
