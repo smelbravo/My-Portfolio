@@ -3,24 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portefólio de Samuel Bravo (smel). Videojogos, mods de Road to Vostok e projetos de programação.">
+  <meta name="description" content="Portefólio de Samuel Bravo (smel). Videojogos, mods de Road to Vostok e projetos de programação." data-en-content="Samuel Bravo’s portfolio. Games, Road to Vostok mods, and coding projects.">
   <meta name="theme-color" content="#101311">
-  <title>Samuel Bravo · Portefólio</title>
+  <title data-en="Samuel Bravo · Portfolio">Samuel Bravo · Portefólio</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script src="portfolio.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main">Saltar para o conteúdo</a>
+  <a class="skip" href="#main" data-en="Skip to content">Saltar para o conteúdo</a>
   <header class="header" id="inicio">
     <div class="wrap header-inner">
       <a class="brand" href="#inicio"><span>SB</span> Samuel Bravo</a>
-      <nav aria-label="Navegação principal">
-        <a href="#projetos">Projetos</a>
-        <a href="#percurso">Percurso</a>
-        <a href="#contacto">Contacto</a>
+      <nav aria-label="Navegação principal" data-en-aria-label="Main navigation">
+        <a href="#projetos" data-en="Projects">Projetos</a>
+        <a href="#percurso" data-en="Experience">Percurso</a>
+        <a href="#contacto" data-en="Contact">Contacto</a>
       </nav>
       <a class="header-github" href="https://github.com/smelbravo">GitHub ↗</a>
+      <div class="filters" id="language-picker" role="group" aria-label="Idioma" data-en-aria-label="Language" hidden>
+        <button type="button" lang="pt-PT" aria-label="Português" aria-pressed="true">PT</button>
+        <button type="button" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
     </div>
   </header>
   <main id="main">
@@ -28,26 +32,26 @@
       <div>
         <p class="eyebrow"><span></span> @SMELBRAVO / PORTUGAL</p>
         <h1 id="intro">Samuel<br><em>Bravo.</em></h1>
-        <p class="hero-text">Programo videojogos e crio mods, protótipos e ferramentas para comunidades de jogadores.</p>
+        <p class="hero-text" data-en="I develop games and build mods, prototypes, and tools for gaming communities.">Programo videojogos e crio mods, protótipos e ferramentas para comunidades de jogadores.</p>
         <div class="actions">
-          <a class="button primary" href="#projetos">Explorar projetos ↓</a>
-          <a class="button secondary" href="#percurso">O meu percurso</a>
+          <a class="button primary" href="#projetos" data-en="Explore projects ↓">Explorar projetos ↓</a>
+          <a class="button secondary" href="#percurso" data-en="My experience">O meu percurso</a>
         </div>
       </div>
       <div class="portrait">
-        <img src="https://avatars.githubusercontent.com/u/148441525?v=4&amp;s=720" alt="Avatar de Samuel Bravo no GitHub" width="720" height="720">
+        <img src="https://avatars.githubusercontent.com/u/148441525?v=4&amp;s=720" alt="Avatar de Samuel Bravo no GitHub" width="720" height="720" data-en-alt="Samuel Bravo’s GitHub avatar">
         <div class="portrait-caption"><span>SMEL</span><span>Portugal</span></div>
       </div>
     </section>
     <div class="stack"><div class="wrap"><span>Unity</span><span>C#</span><span>Godot</span><span>GDScript</span><span>Phaser</span><span>Git</span></div></div>
     <section class="wrap section" id="projetos" aria-labelledby="project-heading">
       <div class="section-head">
-        <h2 id="project-heading">Projetos</h2>
-        <div class="filters" role="group" aria-label="Filtrar projetos" hidden>
-          <button type="button" aria-pressed="true" data-filter="Todos">Todos</button>
-          <button type="button" aria-pressed="false" data-filter="Jogos">Jogos</button>
+        <h2 id="project-heading" data-en="Projects">Projetos</h2>
+        <div class="filters" id="project-filters" role="group" aria-label="Filtrar projetos" hidden data-en-aria-label="Filter projects">
+          <button type="button" aria-pressed="true" data-filter="Todos" data-en="All">Todos</button>
+          <button type="button" aria-pressed="false" data-filter="Jogos" data-en="Games">Jogos</button>
           <button type="button" aria-pressed="false" data-filter="Mods">Mods</button>
-          <button type="button" aria-pressed="false" data-filter="Código">Código</button>
+          <button type="button" aria-pressed="false" data-filter="Código" data-en="Code">Código</button>
         </div>
       </div>
       <p class="sr-only" id="filter-status" role="status"></p>
@@ -55,19 +59,19 @@
           <article class="card" data-category="Jogos">
             <div class="art run" aria-hidden="true"><span>DEAD RUN</span></div>
             <div class="card-body">
-              <p class="category">Jogos</p>
+              <p class="category" data-en="Games">Jogos</p>
               <h3>Dead Run</h3>
-              <p class="description">Endless runner roguelike com vista de cima, desenvolvido em Phaser. Joga no browser ou descarrega para Windows e Android.</p>
-              <a class="project-link" href="https://smel111.itch.io/deadrun" aria-label="Jogar no itch.io — Dead Run">Jogar no itch.io <span aria-hidden="true">↗</span></a>
+              <p class="description" data-en="A top-down roguelike endless runner built with Phaser. Play in your browser or download for Windows and Android.">Endless runner roguelike com vista de cima, desenvolvido em Phaser. Joga no browser ou descarrega para Windows e Android.</p>
+              <a class="project-link" href="https://smel111.itch.io/deadrun" aria-label="Jogar no itch.io — Dead Run" data-en-aria-label="Play on itch.io — Dead Run" data-en="Play on itch.io">Jogar no itch.io <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Jogos">
             <div class="art gun" aria-hidden="true"><img src="https://img.itch.zone/aW1nLzE0Mzg5MDE3LnBuZw%3D%3D/original/zLdfP3.png" alt="" loading="lazy"><span>THE GUN</span></div>
             <div class="card-body">
-              <p class="category">Jogos</p>
+              <p class="category" data-en="Games">Jogos</p>
               <h3>The Gun</h3>
-              <p class="description">Projeto de plataformas e prequela de Chain Gun, desenvolvido durante o curso.</p>
-              <a class="project-link" href="https://smel111.itch.io/thegun" aria-label="Ver no itch.io — The Gun">Ver no itch.io <span aria-hidden="true">↗</span></a>
+              <p class="description" data-en="A platformer and prequel to Chain Gun, developed during my studies.">Projeto de plataformas e prequela de Chain Gun, desenvolvido durante o curso.</p>
+              <a class="project-link" href="https://smel111.itch.io/thegun" aria-label="Ver no itch.io — The Gun" data-en-aria-label="View on itch.io — The Gun" data-en="View on itch.io">Ver no itch.io <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Mods">
@@ -75,206 +79,206 @@
             <div class="card-body">
               <p class="category">Mods</p>
               <h3>No Gear Loss on Death</h3>
-              <p class="description">Mantém o equipamento após morrer em Road to Vostok, incluindo no modo permadeath.</p>
-              <a class="project-link" href="https://vostokmods.net/mod/no-gear-loss-on-death-permadeath" aria-label="Ver mod — No Gear Loss on Death">Ver mod <span aria-hidden="true">↗</span></a>
+              <p class="description" data-en="Keep your gear after dying in Road to Vostok, including in permadeath mode.">Mantém o equipamento após morrer em Road to Vostok, incluindo no modo permadeath.</p>
+              <a class="project-link" href="https://vostokmods.net/mod/no-gear-loss-on-death-permadeath" aria-label="Ver mod — No Gear Loss on Death" data-en-aria-label="View mod — No Gear Loss on Death" data-en="View mod">Ver mod <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="art code" aria-hidden="true"><span>SAVE EDITOR</span></div>
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>Road to Vostok Save Editor</h3>
-              <p class="description">Editor de ficheiros de gravação para Road to Vostok.</p>
-              <a class="project-link" href="https://github.com/smelbravo/Road-to-Vostok-Save-Editor" aria-label="Ver código — Road to Vostok Save Editor">Ver código <span aria-hidden="true">↗</span></a>
+              <p class="description" data-en="A save file editor for Road to Vostok.">Editor de ficheiros de gravação para Road to Vostok.</p>
+              <a class="project-link" href="https://github.com/smelbravo/Road-to-Vostok-Save-Editor" aria-label="Ver código — Road to Vostok Save Editor" data-en-aria-label="View source — Road to Vostok Save Editor" data-en="View source">Ver código <span aria-hidden="true">↗</span></a>
             </div>
           </article>
       </div>
       <details class="archive" open>
-        <summary>Mais projetos</summary>
+        <summary data-en="More projects">Mais projetos</summary>
         <div class="projects compact">
           <article class="card" data-category="Jogos">
             <div class="card-body">
-              <p class="category">Jogos</p>
+              <p class="category" data-en="Games">Jogos</p>
               <h3>Rapazes Caem</h3>
-              <p class="description">Paródia de Fall Guys criada como projeto de final de semestre.</p>
-              <a class="project-link" href="https://smel111.itch.io/rapazes-caem" aria-label="Ver no itch.io — Rapazes Caem">Ver no itch.io <span aria-hidden="true">↗</span></a>
+              <p class="description" data-en="A Fall Guys parody created as an end-of-semester project.">Paródia de Fall Guys criada como projeto de final de semestre.</p>
+              <a class="project-link" href="https://smel111.itch.io/rapazes-caem" aria-label="Ver no itch.io — Rapazes Caem" data-en-aria-label="View on itch.io — Rapazes Caem" data-en="View on itch.io">Ver no itch.io <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Jogos">
             <div class="card-body">
-              <p class="category">Jogos</p>
+              <p class="category" data-en="Games">Jogos</p>
               <h3>Stellar Strike</h3>
-              <p class="description">Colaboração num projeto académico de videojogos publicado na página de um colega.</p>
-              <a class="project-link" href="https://nocturneiii.itch.io/stellar-strike" aria-label="Ver no itch.io — Stellar Strike">Ver no itch.io <span aria-hidden="true">↗</span></a>
+              <p class="description" data-en="A collaborative game developed for a course assignment and published on a teammate’s page.">Colaboração num projeto académico de videojogos publicado na página de um colega.</p>
+              <a class="project-link" href="https://nocturneiii.itch.io/stellar-strike" aria-label="Ver no itch.io — Stellar Strike" data-en-aria-label="View on itch.io — Stellar Strike" data-en="View on itch.io">Ver no itch.io <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Jogos">
             <div class="card-body">
-              <p class="category">Jogos</p>
+              <p class="category" data-en="Games">Jogos</p>
               <h3>Master Racers</h3>
-              <p class="description">Protótipo de corridas com adversários que seguem percursos definidos e uma garagem para personalizar carros.</p>
+              <p class="description" data-en="A racing prototype with opponents that follow predefined routes and a garage for customising cars.">Protótipo de corridas com adversários que seguem percursos definidos e uma garagem para personalizar carros.</p>
             </div>
           </article>
           <article class="card" data-category="Mods">
             <div class="card-body">
               <p class="category">Mods</p>
               <h3>World Flags</h3>
-              <p class="description">Bandeiras nacionais e históricas para decorar o abrigo.</p>
-              <a class="project-link" href="https://vostokmods.net/mod/world-flags" aria-label="Ver mod — World Flags">Ver mod <span aria-hidden="true">↗</span></a>
+              <p class="description" data-en="National and historical flags to decorate your shelter.">Bandeiras nacionais e históricas para decorar o abrigo.</p>
+              <a class="project-link" href="https://vostokmods.net/mod/world-flags" aria-label="Ver mod — World Flags" data-en-aria-label="View mod — World Flags" data-en="View mod">Ver mod <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Mods">
             <div class="card-body">
               <p class="category">Mods</p>
               <h3>Trader Inventory Drag</h3>
-              <p class="description">Reorganiza a mochila enquanto negoceias.</p>
-              <a class="project-link" href="https://vostokmods.net/mod/trader-inventory-drag" aria-label="Ver mod — Trader Inventory Drag">Ver mod <span aria-hidden="true">↗</span></a>
+              <p class="description" data-en="Rearrange your backpack while trading.">Reorganiza a mochila enquanto negoceias.</p>
+              <a class="project-link" href="https://vostokmods.net/mod/trader-inventory-drag" aria-label="Ver mod — Trader Inventory Drag" data-en-aria-label="View mod — Trader Inventory Drag" data-en="View mod">Ver mod <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Mods">
             <div class="card-body">
               <p class="category">Mods</p>
               <h3>Quimera Toolkit</h3>
-              <p class="description">Menu de ferramentas e opções de jogo para Road to Vostok.</p>
-              <a class="project-link" href="https://vostokmods.net/mod/quimera-toolkit" aria-label="Ver mod — Quimera Toolkit">Ver mod <span aria-hidden="true">↗</span></a>
+              <p class="description" data-en="A menu of tools and gameplay options for Road to Vostok.">Menu de ferramentas e opções de jogo para Road to Vostok.</p>
+              <a class="project-link" href="https://vostokmods.net/mod/quimera-toolkit" aria-label="Ver mod — Quimera Toolkit" data-en-aria-label="View mod — Quimera Toolkit" data-en="View mod">Ver mod <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Mods">
             <div class="card-body">
               <p class="category">Mods</p>
               <h3>Weapon Drop &amp; Auto-Equip</h3>
-              <p class="description">Larga a arma com uma tecla e equipa automaticamente as armas que apanhas.</p>
-              <a class="project-link" href="https://vostokmods.net/mod/weapon-drop-auto-equip" aria-label="Ver mod — Weapon Drop &amp; Auto-Equip">Ver mod <span aria-hidden="true">↗</span></a>
+              <p class="description" data-en="Drop your weapon with one key and automatically equip weapons you pick up.">Larga a arma com uma tecla e equipa automaticamente as armas que apanhas.</p>
+              <a class="project-link" href="https://vostokmods.net/mod/weapon-drop-auto-equip" aria-label="Ver mod — Weapon Drop &amp; Auto-Equip" data-en-aria-label="View mod — Weapon Drop &amp; Auto-Equip" data-en="View mod">Ver mod <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Mods">
             <div class="card-body">
               <p class="category">Mods</p>
               <h3>Ammo Stack Size</h3>
-              <p class="description">Configura o tamanho máximo das pilhas de munição.</p>
-              <a class="project-link" href="https://vostokmods.net/mod/ammo-stack-size" aria-label="Ver mod — Ammo Stack Size">Ver mod <span aria-hidden="true">↗</span></a>
+              <p class="description" data-en="Set the maximum ammunition stack size.">Configura o tamanho máximo das pilhas de munição.</p>
+              <a class="project-link" href="https://vostokmods.net/mod/ammo-stack-size" aria-label="Ver mod — Ammo Stack Size" data-en-aria-label="View mod — Ammo Stack Size" data-en="View mod">Ver mod <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Mods">
             <div class="card-body">
               <p class="category">Mods</p>
               <h3>Simple Dynamic Seasons</h3>
-              <p class="description">Introduz a chegada do inverno com base no progresso no jogo.</p>
-              <a class="project-link" href="https://vostokmods.net/mod/simple-dynamic-seasons" aria-label="Ver mod — Simple Dynamic Seasons">Ver mod <span aria-hidden="true">↗</span></a>
+              <p class="description" data-en="Winter arrives based on your progress in the game.">Introduz a chegada do inverno com base no progresso no jogo.</p>
+              <a class="project-link" href="https://vostokmods.net/mod/simple-dynamic-seasons" aria-label="Ver mod — Simple Dynamic Seasons" data-en-aria-label="View mod — Simple Dynamic Seasons" data-en="View mod">Ver mod <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Mods">
             <div class="card-body">
               <p class="category">Mods</p>
               <h3>Speedrun Timer</h3>
-              <p class="description">Cronómetro com cinco percursos e registo de recordes pessoais.</p>
-              <a class="project-link" href="https://vostokmods.net/mod/speedrun-timer" aria-label="Ver mod — Speedrun Timer">Ver mod <span aria-hidden="true">↗</span></a>
+              <p class="description" data-en="A timer with five route slots and personal best tracking.">Cronómetro com cinco percursos e registo de recordes pessoais.</p>
+              <a class="project-link" href="https://vostokmods.net/mod/speedrun-timer" aria-label="Ver mod — Speedrun Timer" data-en-aria-label="View mod — Speedrun Timer" data-en="View mod">Ver mod <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>Wplace-SussyMarble</h3>
-              <a class="project-link" href="https://github.com/smelbravo/Wplace-SussyMarble" aria-label="Ver repositório — Wplace-SussyMarble">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/Wplace-SussyMarble" aria-label="Ver repositório — Wplace-SussyMarble" data-en-aria-label="View repository — Wplace-SussyMarble" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>csr-launcher-x</h3>
-              <a class="project-link" href="https://github.com/smelbravo/csr-launcher-x" aria-label="Ver repositório — csr-launcher-x">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/csr-launcher-x" aria-label="Ver repositório — csr-launcher-x" data-en-aria-label="View repository — csr-launcher-x" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>Lock-Key</h3>
-              <a class="project-link" href="https://github.com/smelbravo/Lock-Key" aria-label="Ver repositório — Lock-Key">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/Lock-Key" aria-label="Ver repositório — Lock-Key" data-en-aria-label="View repository — Lock-Key" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>CS-Restored-Inventory-Helper</h3>
-              <a class="project-link" href="https://github.com/smelbravo/CS-Restored-Inventory-Helper" aria-label="Ver repositório — CS-Restored-Inventory-Helper">Ver repositório <span aria-hidden="true">↗</span></a>
-              <a class="project-link" href="https://addons.mozilla.org/pt-PT/firefox/addon/csr-inventory-helper/" aria-label="Ver no Firefox Add-ons — CS-Restored Inventory Helper">Ver no Firefox Add-ons <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/CS-Restored-Inventory-Helper" aria-label="Ver repositório — CS-Restored-Inventory-Helper" data-en-aria-label="View repository — CS-Restored-Inventory-Helper" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://addons.mozilla.org/pt-PT/firefox/addon/csr-inventory-helper/" aria-label="Ver no Firefox Add-ons — CS-Restored Inventory Helper" data-en-aria-label="View on Firefox Add-ons — CS-Restored Inventory Helper" data-en="View on Firefox Add-ons">Ver no Firefox Add-ons <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>fifa-street-pc-port</h3>
-              <a class="project-link" href="https://github.com/smelbravo/fifa-street-pc-port" aria-label="Ver repositório — fifa-street-pc-port">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/fifa-street-pc-port" aria-label="Ver repositório — fifa-street-pc-port" data-en-aria-label="View repository — fifa-street-pc-port" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>Old-Games-Repo</h3>
-              <a class="project-link" href="https://github.com/smelbravo/Old-Games-Repo" aria-label="Ver repositório — Old-Games-Repo">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/Old-Games-Repo" aria-label="Ver repositório — Old-Games-Repo" data-en-aria-label="View repository — Old-Games-Repo" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>VostokTranslate_Resource_PT-PT</h3>
-              <a class="project-link" href="https://github.com/smelbravo/VostokTranslate_Resource_PT-PT" aria-label="Ver repositório — VostokTranslate_Resource_PT-PT">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/VostokTranslate_Resource_PT-PT" aria-label="Ver repositório — VostokTranslate_Resource_PT-PT" data-en-aria-label="View repository — VostokTranslate_Resource_PT-PT" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>cs2-inv-stats-extension</h3>
-              <a class="project-link" href="https://github.com/smelbravo/cs2-inv-stats-extension" aria-label="Ver repositório — cs2-inv-stats-extension">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/cs2-inv-stats-extension" aria-label="Ver repositório — cs2-inv-stats-extension" data-en-aria-label="View repository — cs2-inv-stats-extension" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>playgta5</h3>
-              <a class="project-link" href="https://github.com/smelbravo/playgta5" aria-label="Ver repositório — playgta5">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/playgta5" aria-label="Ver repositório — playgta5" data-en-aria-label="View repository — playgta5" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>launcher-cc</h3>
-              <a class="project-link" href="https://github.com/smelbravo/launcher-cc" aria-label="Ver repositório — launcher-cc">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/launcher-cc" aria-label="Ver repositório — launcher-cc" data-en-aria-label="View repository — launcher-cc" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>nx2android</h3>
-              <a class="project-link" href="https://github.com/smelbravo/nx2android" aria-label="Ver repositório — nx2android">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/nx2android" aria-label="Ver repositório — nx2android" data-en-aria-label="View repository — nx2android" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>FIFA-14-Local-FUT</h3>
-              <a class="project-link" href="https://github.com/smelbravo/FIFA-14-Local-FUT" aria-label="Ver repositório — FIFA-14-Local-FUT">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/FIFA-14-Local-FUT" aria-label="Ver repositório — FIFA-14-Local-FUT" data-en-aria-label="View repository — FIFA-14-Local-FUT" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>gta-launcher</h3>
-              <a class="project-link" href="https://github.com/smelbravo/gta-launcher" aria-label="Ver repositório — gta-launcher">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/gta-launcher" aria-label="Ver repositório — gta-launcher" data-en-aria-label="View repository — gta-launcher" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>Wand-Enhancer</h3>
-              <a class="project-link" href="https://github.com/smelbravo/Wand-Enhancer" aria-label="Ver repositório — Wand-Enhancer">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/Wand-Enhancer" aria-label="Ver repositório — Wand-Enhancer" data-en-aria-label="View repository — Wand-Enhancer" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="card" data-category="Código">
             <div class="card-body">
-              <p class="category">Código</p>
+              <p class="category" data-en="Code">Código</p>
               <h3>faceitperf</h3>
-              <a class="project-link" href="https://github.com/smelbravo/faceitperf" aria-label="Ver repositório — faceitperf">Ver repositório <span aria-hidden="true">↗</span></a>
+              <a class="project-link" href="https://github.com/smelbravo/faceitperf" aria-label="Ver repositório — faceitperf" data-en-aria-label="View repository — faceitperf" data-en="View repository">Ver repositório <span aria-hidden="true">↗</span></a>
             </div>
           </article>
         </div>
@@ -283,24 +287,24 @@
     <section class="section journey" id="percurso" aria-labelledby="journey-heading">
       <div class="wrap journey-grid">
         <div>
-          <h2 id="journey-heading">Percurso</h2>
-          <p>Tenho formação em informática e desenvolvimento de videojogos. Em trabalhos de curso e game jams, colaborei na programação de mecânicas, implementação de interfaces e integração de recursos 2D e 3D.</p>
+          <h2 id="journey-heading" data-en="Experience">Percurso</h2>
+          <p data-en="My background is in IT and game development. In course projects and game jams, I worked with teammates to program gameplay mechanics, implement interfaces, and integrate 2D and 3D assets.">Tenho formação em informática e desenvolvimento de videojogos. Em trabalhos de curso e game jams, colaborei na programação de mecânicas, implementação de interfaces e integração de recursos 2D e 3D.</p>
         </div>
         <ol class="timeline">
-          <li><span>2026</span><div><h3>Programador de videojogos · Tokenwised</h3><p>Desenvolvimento de jogos para web em Godot e GDScript.</p></div></li>
-          <li><span>Desde 2023</span><div><h3>Desenvolvimento de Videojogos e Aplicações Multimédia</h3><p>CTeSP no Instituto Politécnico de Setúbal.</p></div></li>
-          <li><span>2024</span><div><h3>Técnico de Apoio Informático · Eleições Europeias</h3><p>Apoio à mesa de voto na utilização dos cadernos eleitorais digitais.</p></div></li>
-          <li><span>2023</span><div><h3>Estágio em informática · Visteon Portugal</h3><p>Manutenção de computadores e resolução de problemas de rede e software.</p></div></li>
-          <li><span>2022</span><div><h3>Estágio · ANPRI</h3><p>Estágio de 150 horas na Associação Nacional de Professores de Informática.</p></div></li>
-          <li><span>2020–2023</span><div><h3>Gestão e Programação de Sistemas Informáticos</h3><p>Curso profissional na Escola Secundária de Santo André.</p></div></li>
+          <li><span>2026</span><div><h3 data-en="Game Developer · Tokenwised">Programador de videojogos · Tokenwised</h3><p data-en="Developed web games with Godot and GDScript.">Desenvolvimento de jogos para web em Godot e GDScript.</p></div></li>
+          <li><span data-en="Since 2023">Desde 2023</span><div><h3 data-en="Game Development and Multimedia Applications">Desenvolvimento de Videojogos e Aplicações Multimédia</h3><p data-en="Professional higher technical programme at the Polytechnic Institute of Setúbal.">CTeSP no Instituto Politécnico de Setúbal.</p></div></li>
+          <li><span>2024</span><div><h3 data-en="IT Support Technician · European Elections">Técnico de Apoio Informático · Eleições Europeias</h3><p data-en="Helped polling station staff use digital electoral registers.">Apoio à mesa de voto na utilização dos cadernos eleitorais digitais.</p></div></li>
+          <li><span>2023</span><div><h3 data-en="IT Internship · Visteon Portugal">Estágio em informática · Visteon Portugal</h3><p data-en="Maintained computers and troubleshot network and software issues.">Manutenção de computadores e resolução de problemas de rede e software.</p></div></li>
+          <li><span>2022</span><div><h3 data-en="Internship · ANPRI">Estágio · ANPRI</h3><p data-en="A 150-hour internship at Portugal’s National Association of IT Teachers.">Estágio de 150 horas na Associação Nacional de Professores de Informática.</p></div></li>
+          <li><span>2020–2023</span><div><h3 data-en="IT Systems Management and Programming">Gestão e Programação de Sistemas Informáticos</h3><p data-en="Vocational programme at Santo André Secondary School.">Curso profissional na Escola Secundária de Santo André.</p></div></li>
         </ol>
       </div>
     </section>
     <section class="wrap section contact" id="contacto" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Vamos falar?</h2>
+      <h2 id="contact-heading" data-en="Let’s talk">Vamos falar?</h2>
       <div class="actions">
         <a class="button primary" href="mailto:smel111.dev@gmail.com">smel111.dev@gmail.com ↗</a>
-        <a class="button secondary" href="https://github.com/smelbravo">Encontrar-me no GitHub ↗</a>
+        <a class="button secondary" href="https://github.com/smelbravo" data-en="Find me on GitHub ↗">Encontrar-me no GitHub ↗</a>
       </div>
       <ul class="profiles">
         <li><a href="https://smel111.itch.io/">itch.io ↗</a></li>
@@ -310,6 +314,6 @@
       </ul>
     </section>
   </main>
-  <footer class="wrap footer"><span>Samuel Bravo · smel</span><a href="#inicio">Voltar ao topo ↑</a></footer>
+  <footer class="wrap footer"><span>Samuel Bravo · smel</span><a href="#inicio" data-en="Back to top ↑">Voltar ao topo ↑</a></footer>
 </body>
 </html>
