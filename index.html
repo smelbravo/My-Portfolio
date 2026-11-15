@@ -82,7 +82,14 @@
       <p class="sr-only" id="filter-status" role="status"></p>
       <div class="projects featured">
           <article class="card" data-category="Código">
-            <div class="art"><img src="assets/restreet-cover.webp" alt="" width="1920" height="1080" loading="lazy"></div>
+            <div class="art" style="position:relative" aria-hidden="true">
+              <img src="assets/restreet-cover.webp" alt="" width="1920" height="1080" loading="lazy">
+              <div style="position:absolute;inset:auto 0 0;padding:clamp(10px,2vw,24px);background:linear-gradient(transparent,#080c12 90%);color:#fff;line-height:1.1">
+                <div style="font-size:clamp(1.15rem,3vw,2rem);font-weight:800">FIFA STREET</div>
+                <div style="color:#ffd44d;font-size:clamp(.9rem,2vw,1.35rem);font-weight:700">2012 / RESTREET</div>
+                <div style="width:fit-content;border-top:2px solid #ffd44d;margin-top:.45rem;padding-top:.35rem;font-size:clamp(.75rem,1.6vw,1rem)">ReStreet Mod Switcher</div>
+              </div>
+            </div>
             <div class="card-body">
               <p class="category" data-en="Code · In development">Código · Em desenvolvimento</p>
               <h3>ReStreet Mod Switcher</h3>
